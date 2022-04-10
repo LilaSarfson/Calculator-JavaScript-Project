@@ -10,44 +10,37 @@
 </head>
 
 <body>
- <section class="calculator">
-  <form>
-   <input type="text" name="" id="" class="screen">
-  </form>
-  <div class="buttons">
-   <!-- yellow -->
-   <button type="button" class="btn btn-yellow" data-num="*">*</button>
-   <button type="button" class="btn btn-yellow" data-num="/">/</button>
-   <button type="button" class="btn btn-yellow" data-num="-">-</button>
-   <button type="button" class="btn btn-yellow" data-num="+">+</button>
-   <!-- grey buttons -->
-   <button type="button" class="btn btn-grey" data-num=".">.</button>
-   <button type="button" class="btn btn-grey" data-num="9">9</button>
-   <button type="button" class="btn btn-grey" data-num="8">8</button>
-   <button type="button" class="btn btn-grey" data-num="7">7</button>
-   <button type="button" class="btn btn-grey" data-num="6">6</button>
-   <button type="button" class="btn btn-grey" data-num="5">5</button>
-   <button type="button" class="btn btn-grey" data-num="4">4</button>
-   <button type="button" class="btn btn-grey" data-num="3">3</button>
-   <button type="button" class="btn btn-grey" data-num="2">2</button>
-   <button type="button" class="btn btn-grey" data-num="1">1</button>
-   <button type="button" class="btn btn-grey" data-num="0">0</button>
-   <button type="button" class="btn-equal btn-grey">=</button>
-   <button type="button" class="btn-clear btn-grey">C</button>
+ <div id="app">
+     <section class="calculator">
+      <form>
+       <input v-model="AllKeysPushed"type="text" name="" id="" class="screen">
+      </form>
+      <div class="buttons">
+       <!-- yellow -->
+       <button value="*" @click="ValueofTheKey" type="button" class="btn btn-yellow" data-num="*">*</button>
+       <button value="/" @click="ValueofTheKey" type="button" class="btn btn-yellow" data-num="/">/</button>
+       <button  value="-" @click="ValueofTheKey"type="button" class="btn btn-yellow" data-num="-">-</button>
+       <button   value="+" @click="ValueofTheKey"type="button" class="btn btn-yellow" data-num="+">+</button>
+       <!-- grey buttons -->
+       <button   value="."@click="ValueofTheKey"type="button" class="btn btn-grey" data-num=".">.</button>
+       <button  value="9" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="9">9</button>
+       <button  value="8" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="8">8</button>
+       <button  value="7" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="7">7</button>
+       <button  value="6" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="6">6</button>
+       <button  value="5" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="5">5</button>
+       <button  value="4" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="4">4</button>
+       <button value="3"  @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="3">3</button>
+       <button  value="2" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="2">2</button>
+       <button  value="1" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="1">1</button>
+       <button  value="0" @click="ValueofTheKey"type="button" class="btn btn-grey" data-num="0">0</button>
+       <button  @click="Calculate"type="button" class="btn-equal btn-grey">=</button>
+       <button  @click="Eraser"type="button" class="btn-clear btn-grey">C</button>
+      </div>
+     </section>
+ </div>
 
 
-  </div>
-
-
-
-
-
- </section>
-
-
-
-
-
+ <script src="https://unpkg.com/vue@3"></script>
  <script src="./app.js"></script>
 </body>
 
